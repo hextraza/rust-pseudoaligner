@@ -358,7 +358,7 @@ impl<K: Kmer + Sync + Send> Pseudoaligner<K> {
     /// Pseudoalign the `read_seq` to the graph. Returns a tuple of the
     /// eqivalence class, the number of bases aligned on success,
     /// and the number of mismatched bases, or None is no alignment could be found.
-    pub(crate) fn map_read_with_mismatch(
+    pub fn map_read_with_mismatch(
         &self,
         read_seq: &DnaString,
         allowed_mismatches: usize,
